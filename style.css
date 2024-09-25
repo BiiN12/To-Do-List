@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #0696b6 0%, #3a47d5 100%);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    box-shadow: #423f3f 0px 10px 15px;
+}
+
+.todo-app h2 {
+    color: #3d3d3d;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-weight: 14px;
+    background: transparent;
+    padding: 10px;
+}
+
+/* ::placeholder {
+    color: #dddbdb;
+} */
+
+button {
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #057b96 0%, #3a47d5 100%);
+    cursor: pointer;
+    padding: 16px 50px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    color: #3d3d3d;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #686262;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    color: #686262;
+    top: 5px;
+    right: 0;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+#completed-tasks.hidden {
+    display: none;
+}
+
+
+.toggle-btn {
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+    margin-top: 30px;
+    text-decoration: none;
+    user-select: none;
+}
